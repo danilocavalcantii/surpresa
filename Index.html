@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Casamento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="message" class="message"></div>
+        <div id="options" class="options"></div>
+    </div>
+    <audio id="backgroundMusic" loop>
+        <source src="background.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <script src="script.js"></script>
+    <script>
+        // Iniciar a música de fundo automaticamente
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        backgroundMusic.play().catch((error) => {
+            console.log('Autoplay foi bloqueado. Reproduza manualmente.');
+        });
+    </script>
+</body>
+</html>
